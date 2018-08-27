@@ -8,12 +8,7 @@ public class Aquaman {
 	}
 	
 	public void saveTheWorld() {
-	    if (name == "Aquaman") {
-            System.out.print( name + " saves the world again! Atlantis rejoices!\n" );
-        } else {
-            System.out.print( name + " saves the world again!\n" );
-        }
-
+        System.out.print( name + " saves the world again! Atlantis rejoices!\n" );
 	}
 }
 
