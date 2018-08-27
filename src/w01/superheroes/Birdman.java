@@ -1,4 +1,4 @@
-package w01.tutorials.superheroes;
+package w01.superheroes;
 
 public class Birdman {
     private String name;
