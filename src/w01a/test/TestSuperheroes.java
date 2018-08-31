@@ -1,39 +1,45 @@
-package w01.test;
+package w01a.test;
 
-import w01.superheroes.*;
+import w01a.superheroes.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TestSuperheroes {
-	public TestSuperheroes() {
-		Aquaman aquaman = new Aquaman("Aquaman");
-        aquaman.saveTheWorld();
-
+	 TestSuperheroes() {
+	    // Create superheroes as separate classes
+//		Aquaman aquaman = new Aquaman("Aquaman");
         Superman superman = new Superman("Superman");
-        superman.saveTheWorld();
+//        Batman batman = new Batman("Batman");
+//        Birdman birdman = new Birdman("Birdman");
+//        WonderWoman wonderWoman = new WonderWoman("Wonder Woman");
 
-        Batman batman = new Batman("Batman");
-        batman.saveTheWorld();
+        // Call saveTheWorld method (varies by class)
+//		aquaman.saveTheWorld();
+		superman.saveTheWorld();
+//		batman.saveTheWorld();
+//		birdman.saveTheWorld();
+//		wonderWoman.saveTheWorld();
 
-        Birdman birdman = new Birdman("Birdman");
-        birdman.saveTheWorld();
+        List<Object> superHeroes = new ArrayList <Object>();
 
-        WonderWoman wonderWoman = new WonderWoman("Wonder Woman");
-        wonderWoman.saveTheWorld();
+        // List superHeroes = new ArrayList();
+        superHeroes.add(new Aquaman("aquaman"));
 
-        List superHeroes = new ArrayList();
-        superHeroes.add(aquaman);
         superHeroes.add(superman);
-        superHeroes.add(batman);
-        superHeroes.add(birdman);
-        superHeroes.add(wonderWoman);
+
+//        superHeroes.add(batman);
+//        superHeroes.add(birdman);
+//        superHeroes.add(wonderWoman);
 
         // iterate via "for loop"
-        System.out.println("==> For Loop Example.");
         for (int i = 0; i < superHeroes.size(); i++) {
             System.out.println(superHeroes.get(i).getClass().getName());
+            System.out.println(superHeroes.get(i).getClass());
         }
+
+//        Person person = (Person) obj;
+
 
 //        List<String> superHeroes = new ArrayList<>();
 

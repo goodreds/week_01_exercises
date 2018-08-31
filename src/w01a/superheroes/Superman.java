@@ -1,9 +1,9 @@
-package w01.superheroes;
+package w01a.superheroes;
 
-public class WonderWoman {
+public class Superman extends SuperHero {
     private String name;
 
-    public WonderWoman(String name) {
+    public Superman(String name) {
         this.name = name;
     }
 

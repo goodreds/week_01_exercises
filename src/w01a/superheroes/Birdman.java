@@ -1,6 +1,6 @@
-package w01.superheroes;
+package w01a.superheroes;
 
-public class Birdman {
+public class Birdman extends SuperHero {
     private String name;
 
     public Birdman(String name) {
