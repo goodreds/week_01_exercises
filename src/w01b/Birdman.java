@@ -8,4 +8,8 @@ public class Birdman extends Superhero {
     public String saveTheWorld() {
         return(super.saveTheWorld());
     }
+
+    public String fly() {
+        return ("Birdman is flying close to the sun.");
+    }
 }

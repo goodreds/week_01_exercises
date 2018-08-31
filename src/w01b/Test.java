@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
-    Test() {
+    private Test() {
 
         // Create each of the superheroes
         Aquaman aquaman = new Aquaman("Aquaman");
@@ -13,15 +13,8 @@ public class Test {
         Birdman birdman = new Birdman("Birdman");
         WonderWoman wonderWoman = new WonderWoman("Wonder Woman");
 
-        // Get each of the superheroes to save the world
-//        aquaman.saveTheWorld(); // Custom message overrides parent saveTheWorld() method
-//        superman.saveTheWorld();
-//        batman.saveTheWorld(); // Custom message overrides parent saveTheWorld() method
-//        birdman.saveTheWorld();
-//        wonderWoman.saveTheWorld();
-
         // Create a collection and populate it with all the superhero objects and iterate over the collection and call the saveTheWorld() method.
-        List<Superhero> superHeroes = new ArrayList<Superhero>();
+        List<Superhero> superHeroes = new ArrayList<>();
 
         superHeroes.add(aquaman);
         superHeroes.add(superman);
@@ -30,9 +23,15 @@ public class Test {
         superHeroes.add(wonderWoman);
 
         // iterate via "for loop"
-        for (int i = 0; i < superHeroes.size(); i++) {
-            String message = superHeroes.get(i).saveTheWorld();
+        for (Superhero superHero : superHeroes) {
+            // Get each superhero's saveTheWorld message and show it
+            String message = superHero.saveTheWorld();
             System.out.println(message);
+            // Show custom fly() message if implemented
+            String fly = superHero.fly();
+            if (fly != null) {
+                System.out.println(fly);
+            }
         }
 
     }

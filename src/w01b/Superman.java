@@ -8,4 +8,8 @@ public class Superman extends Superhero {
     public String saveTheWorld() {
         return(super.saveTheWorld());
     }
+
+    public String fly() {
+        return ("Superman is flying to the fortress of solitude.");
+    }
 }

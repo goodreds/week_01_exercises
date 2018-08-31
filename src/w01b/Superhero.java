@@ -9,4 +9,7 @@ public class Superhero {
     public String saveTheWorld() {
         return (name + " saves the world again!");
     }
+    public String fly() {
+        return null;
+    }
 }
