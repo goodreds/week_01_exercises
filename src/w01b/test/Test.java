@@ -1,4 +1,7 @@
-package w01b;
+package w01b.test;
+
+import w01b.superheroes.*;
+import w01b.birds.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +16,13 @@ public class Test {
         Birdman birdman = new Birdman("Birdman");
         WonderWoman wonderWoman = new WonderWoman("Wonder Woman");
 
+        // Create each of the birds
+        Eagle eagle = new Eagle("Eddie");
+        Emu emu = new Emu("Rod Hull & Emu");
+        Parrot parrot = new Parrot("Polly");
+        Penguin penguin = new Penguin("P-p-pick");
+
+
         // Create a collection and populate it with all the superhero objects and iterate over the collection and call the saveTheWorld() method.
         List<Superhero> superHeroes = new ArrayList<>();
 
@@ -23,15 +33,27 @@ public class Test {
         superHeroes.add(wonderWoman);
 
         // iterate via "for loop"
-        for (Superhero superHero : superHeroes) {
-            // Get each superhero's saveTheWorld message and show it
+        // Get each superhero's saveTheWorld message and show it
+        // Show custom fly() message if implemented
+        superHeroes.forEach(superHero -> {
             String message = superHero.saveTheWorld();
             System.out.println(message);
-            // Show custom fly() message if implemented
             String fly = superHero.fly();
             if (fly != null) {
                 System.out.println(fly);
             }
+        });
+
+        List<Object> flyingThings = new ArrayList<>();
+
+        flyingThings.add(superman);
+        flyingThings.add(birdman);
+        flyingThings.add(eagle);
+        flyingThings.add(parrot);
+
+        for (int i = 0; i < flyingThings.size(); i++) {
+            String message = flyingThings.get(i).getClass().getName();
+            System.out.println(message);
         }
 
     }

@@ -1,7 +1,7 @@
-package w01b;
+package w01b.superheroes;
 
 public class WonderWoman extends Superhero {
-    WonderWoman(String name) {
+    public WonderWoman(String name) {
         super(name);
     }
 

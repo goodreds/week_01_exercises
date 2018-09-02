@@ -1,4 +1,4 @@
-package w01b;
+package w01b.superheroes;
 
 public class Superhero {
     protected String name;

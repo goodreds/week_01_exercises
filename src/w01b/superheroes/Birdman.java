@@ -1,7 +1,7 @@
-package w01b;
+package w01b.superheroes;
 
 public class Birdman extends Superhero {
-    Birdman(String name) {
+    public Birdman(String name) {
         super(name);
     }
 
